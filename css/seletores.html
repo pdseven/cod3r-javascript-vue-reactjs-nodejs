@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        .tag {
+            color: #ff0;
+            background: #f77;
+        }
+        #aprovados {
+            color: #598;
+            background: #896;
+        }
+        #aninhado section{
+            color: #798;
+            background: #315;
+        }
+        p + ul {
+            color: #f90;
+            background: #0f7;
+        }
+        p ~ ol {
+            color: #1f0;
+            background: #589;
+        }
+        [feira] {
+            color: #c89;
+            background: #e19;
+        }
+        /*[feira*=empresa]*/
+        [feira~=empresa] {
+            color: #abc;
+            background: #cba;
+        }
+        span:nth-child(1) {
+            color: #ac9;
+            background: #9af;
+        }
+        section > :nth-child(odd) /*Filhos Ímpares   | :nth-child(odd) filhos pares*/{
+            color: #89324c;
+            background: #987654;
+        }
+        section > span:nth-of-type(2) {
+            color: #123456;
+            background: #987321;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel' >
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>
